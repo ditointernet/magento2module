@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="footer">
+            <block class="Dito\Magento2module\Block\Magento2module" name="dito" template="Dito_Magento2module::dito/home.phtml" />
+        </referenceContainer>
+    </body>
+</page>

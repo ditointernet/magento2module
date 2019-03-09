@@ -1,0 +1,10 @@
+<?php
+/* @var $this Dito\Magento2module\Helper\Config */
+$helper  = $this;
+?>
+
+<?php if($helper->isDitoEnabled() && $helper->getTrackStatus('home_view')): ?>
+  <script type="text/javascript">
+    dito.track("acessou-home");
+  </script>
+<?php endif; ?>

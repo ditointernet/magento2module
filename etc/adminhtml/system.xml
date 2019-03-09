@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="dito" translate="label" sortOrder="1000">
+            <label>Dito</label>
+        </tab>
+        <section id="aplication" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+            <label>Aplicação</label>
+            <tab>dito</tab>
+            <resource>Dito_Magento2module::config</resource>
+            <group id="Magento2module" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Aplicação</label>
+                <field id="dito_enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Habilitar a Dito</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="app_key" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>App Key</label>
+                    <comment>Caso não consiga encontrar sua APP Key, acesse <a href="http://developers.dito.com.br/v1.0/docs/como-encontrar-sua-api-key-e-api-secret">esse tutorial</a>.</comment>
+                </field>
+                <field id="app_secret" translate="label" type="text" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>App secret</label>
+                </field>
+            </group>
+        </section>
+        <section id="events" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+            <label>Eventos</label>
+            <tab>dito</tab>
+            <resource>Dito_Magento2module::config</resource>
+            <group id="Magento2module" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Eventos</label>
+                <field id="home_view" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Home Page</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="catalog_product_view" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Página do produto</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="catalog_category_view" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Página da categoria</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="catalogsearch_result" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Página de Busca</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="checkout_cart_index" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Página do carrinho</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="checkout_onepage_index" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Página checkout</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="send_revenue" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enviar compra</label>
+                    <comment>Marcando como "NÃO", os eventos de "comprou" e "comprou-produto" chegarão na Dito como "fez-pedido" e "fez-pedido-produto" e sem revenue.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+        <section id="users" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+            <label>Usuários</label>
+            <tab>dito</tab>
+            <resource>Dito_Magento2module::config</resource>
+            <group id="Magento2module" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Usuários</label>
+                <field id="user_id" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Identificador usuário CPF</label>
+                    <comment>Configure o identificador do usuário como "SIM", caso seja CPF, e "NÃO", caso seja e-mail. Caso o identificador seja CPF, o atributo do cliente equivalente a CPF, precisa ser preenchido.</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="user_config_cpf" translate="label" type="text" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Atributo do cliente equivalente a CPF</label>
+                </field>
+                <field id="user_config_cellphone" translate="label" type="text" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Atributo do cliente equivalente a Celular</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

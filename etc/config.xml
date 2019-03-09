@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <aplication>
+            <Magento2module>
+                <dito_enabled>1</dito_enabled>
+            </Magento2module>
+        </aplication>
+        <events>
+            <Magento2module>
+                <home_view>1</home_view>
+                <catalog_product_view>1</catalog_product_view>
+                <catalog_category_view>1</catalog_category_view>
+                <catalogsearch_result>1</catalogsearch_result>
+                <checkout_cart_index>1</checkout_cart_index>
+                <checkout_onepage_index>1</checkout_onepage_index>
+            </Magento2module>
+        </events>
+        <users>
+            <Magento2module>
+                <user_id>1</user_id>
+                <user_config_cpf><![CDATA[taxvat]]></user_config_cpf>
+            </Magento2module>
+        </users>
+    </default>
+</config>
