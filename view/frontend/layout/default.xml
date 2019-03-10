@@ -2,8 +2,8 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
-        <referenceContainer name="before.body.end">
-            <block class="Magento\Framework\View\Element\Template" name="dito_install" template="Dito_Magento2module::dito/default.phtml" />
+        <referenceContainer name="after.body.start">
+            <block class="\Magento\Framework\View\Element\Template" name="dito_install" template="Dito_Magento2module::dito/default.phtml" />
         </referenceContainer>
     </body>
 </page>

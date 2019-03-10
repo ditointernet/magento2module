@@ -1,5 +1,5 @@
 {
-    "name": "dito/module-magento2module",
+    "name": "dito/magento2module",
     "description": "Dito_Magento2module",
     "type": "magento2-module",
     "license": [
