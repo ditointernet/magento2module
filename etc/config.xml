@@ -15,11 +15,12 @@
                 <catalogsearch_result>1</catalogsearch_result>
                 <checkout_cart_index>1</checkout_cart_index>
                 <checkout_onepage_index>1</checkout_onepage_index>
+                <contact_index>1</contact_index>
             </Magento2module>
         </events>
         <users>
             <Magento2module>
-                <user_id>1</user_id>
+                <user_id>0</user_id>
                 <user_config_cpf><![CDATA[taxvat]]></user_config_cpf>
             </Magento2module>
         </users>

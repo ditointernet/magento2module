@@ -1,0 +1,11 @@
+<?php
+/** @var \Dito\Magento2module\Helper\Config $helper */
+
+$helper = $this->getConfigHelper();
+?>
+
+<?php if($helper->isDitoEnabled() && $helper->getTrackStatus('checkout_onepage_index')): ?>
+  <script type="text/javascript">
+    dito.track('acessou-checkout');
+  </script>
+<?php endif; ?>

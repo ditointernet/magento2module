@@ -54,6 +54,10 @@
                     <label>Página checkout</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
+                <field id="contact_index" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Página contato</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
                 <field id="send_revenue" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Enviar compra</label>
                     <comment>Marcando como "NÃO", os eventos de "comprou" e "comprou-produto" chegarão na Dito como "fez-pedido" e "fez-pedido-produto" e sem revenue.</comment>

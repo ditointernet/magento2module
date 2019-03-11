@@ -1,6 +1,7 @@
 <?php
 /** @var \Dito\Magento2module\Helper\Config $helper */
 ?>
+<?php $helper = $this->getConfigHelper(); ?>
 
 <?php if($helper->isDitoEnabled()): ?>
   <script type="text/javascript">
@@ -21,4 +22,10 @@
       session: true
     });
   </script>
+  <?php $customer = $this->getCustomerData(); ?>
+  <?php if(!empty($customer) && isset($customer['id']) && !empty($customer['id'])): ?>
+    <script type="text/javascript">
+      dito.identify(<?php echo json_encode($customer) ?>);
+    </script>
+  <?php endif; ?>
 <?php endif; ?>

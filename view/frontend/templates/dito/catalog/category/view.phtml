@@ -1,0 +1,24 @@
+<?php
+/** @var \Dito\Magento2module\Helper\Config $helper */
+?>
+<?php
+	$helper = $this->getConfigHelper();
+	$currentCategory = $this->getCurrentCategory();
+
+	$data = Array();
+	$categorynames = array();
+	foreach ($currentCategory->getParentCategories() as $parent) {
+		$categorynames[] = $parent->getName();
+	}
+	$data['nome_categoria'] = join(', ', $categorynames);
+	$data['url_key'] = $currentCategory->getUrlKey();
+?>
+
+<?php if($helper->isDitoEnabled() && $helper->getTrackStatus('catalog_category_view')): ?>
+  <script type="text/javascript">
+    dito.track({
+      action: 'acessou-categoria',
+      data: <?php echo json_encode($data); ?>
+    });
+  </script>
+<?php endif; ?>

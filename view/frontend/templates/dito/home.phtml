@@ -1,6 +1,7 @@
 <?php
 /** @var \Dito\Magento2module\Helper\Config $helper */
 ?>
+<?php $helper = $this->getConfigHelper(); ?>
 
 <?php if($helper->isDitoEnabled() && $helper->getTrackStatus('home_view')): ?>
   <script type="text/javascript">

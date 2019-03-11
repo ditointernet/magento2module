@@ -1,0 +1,16 @@
+<?php
+/** @var $this Dito\Magento2module\Block\Product */
+/** @var \Dito\Magento2module\Helper\Config $helper */
+
+$helper = $this->getConfigHelper();
+$productData  = $this->getProductData();
+?>
+
+<?php if($helper->isDitoEnabled() && $helper->getTrackStatus('catalog_product_view')): ?>
+  <script type="text/javascript">
+    dito.track({
+      action: 'acessou-produto',
+      data: <?php echo json_encode($productData); ?>
+    });
+  </script>
+<?php endif; ?>

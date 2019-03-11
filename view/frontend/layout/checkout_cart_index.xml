@@ -3,7 +3,7 @@
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="before.body.end">
-            <block class="Dito\Magento2module\Block\Magento2module" name="dito_home_view" template="Dito_Magento2module::dito/home.phtml" />
+            <block class="Dito\Magento2module\Block\Magento2module" name="dito_checkout_cart_index" template="Dito_Magento2module::dito/checkout/cart/index.phtml" />
         </referenceContainer>
     </body>
 </page>

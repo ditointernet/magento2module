@@ -1,0 +1,16 @@
+<?php
+/** @var \Dito\Magento2module\Helper\Config $helper */
+
+$helper = $this->getConfigHelper();
+?>
+
+<?php if($helper->isDitoEnabled() && $helper->getTrackStatus('catalogsearch_result')): ?>
+  <script type="text/javascript">
+    dito.track({
+      action: 'buscou-produto',
+      data: {
+        termo: '<?php echo $this->escapeHtml($this->getSearchTerm()); ?>'
+      }
+    });
+  </script>
+<?php endif; ?>
